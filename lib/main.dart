@@ -1,7 +1,5 @@
-import 'package:first_flutter_app/pages/exercicio_modulo_10.dart';
-import 'package:first_flutter_app/pages/exercicio_modulo_7.dart';
-import 'package:first_flutter_app/pages/exercicio_modulo_8.dart';
-import 'package:first_flutter_app/pages/exercicio_modulo_9.dart';
+
+import 'package:first_flutter_app/pages/exercicio_modulo_11.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -19,7 +17,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const ExercicioModulo10(),
+      home: const ExercicioModulo11(),
     );
   }
 }
