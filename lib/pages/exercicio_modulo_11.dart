@@ -32,14 +32,18 @@ class _ExercicioModulo11State extends State<ExercicioModulo11> {
       ),
       floatingActionButton: FloatingActionButton(
           onPressed: () {
-            _controller.isOn.value?
-            _controller.toggleVisibility():changeVisibility();
+            _controller.isOn.value
+                ? _controller.toggleVisibility()
+                : changeVisibility();
           },
-          child: ValueListenableBuilder(valueListenable: _controller.visibility, builder: (context, value, child) {
-            return Icon(_controller.visibility.value
-                ? Icons.visibility
-                : Icons.visibility_off);
-          },)),
+          child: ValueListenableBuilder(
+            valueListenable: _controller.visibility,
+            builder: (context, value, child) {
+              return Icon(_controller.visibility.value
+                  ? Icons.visibility
+                  : Icons.visibility_off);
+            },
+          )),
       body: Stack(
         fit: StackFit.expand,
         children: [
@@ -66,11 +70,14 @@ class _ExercicioModulo11State extends State<ExercicioModulo11> {
                       });
                 },
               ),
-              ValueListenableBuilder(valueListenable: _controller.isOn, builder: (context, value, child) {
-                return Visibility(
-                    visible: _controller.isOn.value,
-                    child: Text('Utilizando o Change Notifier'));
-              },)
+              ValueListenableBuilder(
+                valueListenable: _controller.isOn,
+                builder: (context, value, child) {
+                  return Visibility(
+                      visible: _controller.isOn.value,
+                      child: const Text('Utilizando o Change Notifier'));
+                },
+              )
             ],
           ),
           ValueListenableBuilder(
@@ -85,7 +92,7 @@ class _ExercicioModulo11State extends State<ExercicioModulo11> {
                       child: Container(
                         width: double.infinity,
                         height: double.infinity,
-                        child: Icon(
+                        child: const Icon(
                           Icons.visibility_off,
                           size: 80,
                         ),
